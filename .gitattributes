@@ -1,0 +1,25 @@
+# Без этого файла содержимое зависит от настройки core.autocrlf на машине
+# разработчика: у одного в репозиторий уедет LF, у другого CRLF.
+
+# По умолчанию git сам решает, текст это или двоичное, и хранит текст с LF
+* text=auto
+
+# Шаблоны отдаём байт в байт: их открывает FastReport, а не мы
+*.frx  -text
+*.rtf  -text
+
+# Пакетные файлы Windows должны быть с CRLF
+*.bat  text eol=crlf
+
+# Двоичное не трогать никогда
+*.ttf  binary
+*.otf  binary
+*.docx binary
+*.xlsx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.zip  binary
+*.whl  binary
+*.exe  binary

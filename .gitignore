@@ -1,0 +1,40 @@
+# Встроенный интерпретатор и колёса — едут в релизный архив, не в репозиторий
+python/
+wheels/
+
+# Сборка
+dist/
+build/
+*.spec
+*.exe
+
+# Рабочие папки конвертера
+IN/*
+!IN/*.nfo
+OUT/*
+!OUT/.gitkeep
+
+# Результаты конвертации, случайно оставленные рядом с исходниками
+tests/data/*.docx
+tests/data/*.pdf
+tests/data/*.out.frx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Среда
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Документация
+release_v2.0.0.md

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/01/2026 10:00:00">
+  <Dictionary/>
+  <ReportPage Name="Page1" PaperWidth="210" PaperHeight="297" LeftMargin="15" RightMargin="10" TopMargin="12" BottomMargin="12" Watermark.Text="ОБРАЗЕЦ" Watermark.Font="Arial, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="718.2" Height="30">
+      <TextObject Name="HeadLeft" Left="0" Top="0" Width="300" Height="20" Text="Шапка на каждой странице" Font="Arial, 9pt"/>
+      <TextObject Name="HeadRight" Left="500" Top="0" Width="218" Height="20" Text="стр. [Page] из [TotalPages]" HorzAlign="Right" Font="Arial, 9pt"/>
+    </PageHeaderBand>
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="60">
+      <TextObject Name="Title" Left="0" Top="0" Width="718.2" Height="30" Text="Проверка возможностей конвертера" HorzAlign="Center" Font="Times New Roman, 14pt, style=Bold"/>
+      <LineObject Name="Line1" Left="0" Top="36" Width="718.2" Height="0" Border.Width="2" Border.Color="Navy"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="95" Width="718.2" Height="520">
+      <TextObject Name="Html1" Left="0" Top="0" Width="360" Height="40" TextRenderType="HtmlTags" Text="Разметка: &lt;b&gt;жирный&lt;/b&gt;, &lt;i&gt;курсив&lt;/i&gt;, &lt;u&gt;подчёркнутый&lt;/u&gt;, &lt;font color=&quot;#CC0000&quot;&gt;красный&lt;/font&gt;" Font="Arial, 10pt"/>
+      <TextObject Name="Indent1" Left="0" Top="45" Width="360" Height="60" ParagraphOffset="24" HorzAlign="Justify" Text="Абзац с отступом первой строки в 24 единицы: текст выключен по формату, чтобы было видно и отступ, и разгонку слов по ширине." Font="Times New Roman, 10pt"/>
+      <ShapeObject Name="Shape1" Left="380" Top="0" Width="150" Height="100" Shape="Rectangle" Border.Width="1" Border.Color="Gray" Fill.Color="240, 240, 240"/>
+      <TextObject Name="InShape" Left="386" Top="10" Width="138" Height="40" Text="Прямоугольник с заливкой" HorzAlign="Center" Font="Arial, 8pt"/>
+      <RichObject Name="Rich1" Left="0" Top="115" Width="360" Height="70" Text="{\rtf1\ansi\ansicpg1251\deff0{\fonttbl{\f0\fnil\fcharset204 Times New Roman;}}{\colortbl ;\red0\green0\blue192;}\pard\ql{\f0\fs20 RichObject: }{\b\f0\fs20 полужирный}{\f0\fs20 , }{\i\f0\fs20 курсивный}{\f0\fs20  и }{\cf1\ul\f0\fs24 крупный синий}{\f0\fs20  текст.}\par{\f0\fs20 Вторая строка RTF.}}"/>
+      <BarcodeObject Name="Qr1" Left="560" Top="0" Width="120" Height="120" Barcode="QR Code" Barcode.ErrorCorrection="M" Text="https://example.org/frx2docx"/>
+      <BarcodeObject Name="Code128" Left="380" Top="130" Width="300" Height="60" Barcode="Code128" Text="FRX2DOCX-2026"/>
+      <TextObject Name="Link1" Left="0" Top="200" Width="360" Height="20" Text="Ссылка на документацию" Hyperlink.Value="https://example.org/docs" Font="Arial, 10pt"/>
+      <TextObject Name="Rot90" Left="620" Top="210" Width="30" Height="120" Angle="90" Text="Поворот 90" Font="Arial, 9pt"/>
+      <TableObject Name="Table1" Left="0" Top="240" Width="500" Height="80">
+        <TableColumn Name="C1" Width="150"/>
+        <TableColumn Name="C2" Width="175"/>
+        <TableColumn Name="C3" Width="175"/>
+        <TableRow Name="R1" Height="26">
+          <TableCell Name="Cell1" Border.Lines="All" Text="Объединение" ColSpan="2" HorzAlign="Center" Fill.Color="Gainsboro" Font="Arial, 9pt, style=Bold"/>
+          <TableCell Name="Cell2" Border.Lines="All" Text="Заголовок" HorzAlign="Center" Fill.Color="Gainsboro" Font="Arial, 9pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="R2" Height="27">
+          <TableCell Name="Cell3" Border.Lines="All" Text="Слева" RowSpan="2" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell4" Border.Lines="All" Text="Центр" HorzAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell5" Border.Lines="All" Text="Справа" HorzAlign="Right" Font="Arial, 9pt"/>
+        </TableRow>
+        <TableRow Name="R3" Height="27">
+          <TableCell Name="Cell7" Border.Lines="All" Text="Пунктир" Border.Style="Dash" Font="Arial, 9pt"/>
+          <TableCell Name="Cell8" Border.Lines="All" Text="Цветной текст" TextColor="Green" Font="Arial, 9pt"/>
+        </TableRow>
+      </TableObject>
+      <CheckBoxObject Name="Chk1" Left="0" Top="340" Width="20" Height="20" Checked="true"/>
+      <TextObject Name="ChkLabel" Left="24" Top="340" Width="300" Height="20" Text="Отмеченная галка" Font="Arial, 9pt"/>
+      <CheckBoxObject Name="Chk2" Left="0" Top="365" Width="20" Height="20" Checked="false"/>
+      <TextObject Name="ChkLabel2" Left="24" Top="365" Width="300" Height="20" Text="Снятая галка" Font="Arial, 9pt"/>
+      <LineObject Name="VLine" Left="350" Top="340" Width="0" Height="60" Border.Width="1"/>
+      <TextObject Name="Nowrap" Left="0" Top="400" Width="200" Height="20" WordWrap="false" Text="Строка без переноса, которая длиннее своей рамки" Font="Arial, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="640" Width="718.2" Height="26">
+      <TextObject Name="FootCenter" Left="0" Top="0" Width="718.2" Height="20" Text="Подвал на каждой странице — страница [Page]" HorzAlign="Center" Font="Arial, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Page2" Landscape="true" RawPaperSize="9">
+    <ReportTitleBand Name="ReportTitle2" Width="1052" Height="40">
+      <TextObject Name="T2" Left="0" Top="0" Width="1052" Height="30" Text="Вторая страница — альбомная ориентация" HorzAlign="Center" Font="Arial, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data2" Top="45" Width="1052" Height="120">
+      <TextObject Name="T3" Left="0" Top="0" Width="500" Height="30" Text="Секция Word с другой геометрией страницы." Font="Arial, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

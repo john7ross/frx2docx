@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp">
+  <Dictionary/>
+  <ReportPage Name="Page1" PaperWidth="210" PaperHeight="297" LeftMargin="20" RightMargin="15" TopMargin="15" BottomMargin="15">
+    <ReportTitleBand Name="ReportTitle1" Width="680" Height="40">
+      <TextObject Name="T1" Left="0" Top="0" Width="680" Height="30" Text="Шрифты, которых нет в Windows" HorzAlign="Center" Font="PT Astra Serif, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="45" Width="680" Height="220">
+      <TextObject Name="T2" Left="0" Top="0" Width="680" Height="40" Text="PT Astra Serif 11pt: Заёмщик обязуется возвратить Кредитору сумму займа и уплатить проценты в срок." HorzAlign="Justify" Font="PT Astra Serif, 11pt"/>
+      <TextObject Name="T3" Left="0" Top="50" Width="680" Height="40" Text="Liberation Sans 11pt курсив: договор № [root.NomDog] от [root.Date1] г." Font="Liberation Sans, 11pt, style=Italic"/>
+      <TextObject Name="T4" Left="0" Top="100" Width="680" Height="40" Text="Совершенно неизвестный шрифт 11pt: ЁЖИК, ЩУКА, ЪЫЬ, ЭЮЯ — 0123456789." Font="Выдуманный шрифт, 11pt"/>
+      <TextObject Name="T5" Left="0" Top="150" Width="680" Height="40" Text="Consolas 10pt (моноширинный): [root.CardNumber] | 1234-5678-9012" Font="Cousine, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>
