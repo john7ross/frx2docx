@@ -110,6 +110,9 @@ printed. Your own fonts can simply be dropped into `fonts/`.
 The `.frx → .docx` path does not read fonts at all: the font name is written
 into the document and Word resolves it.
 
+Everything this project redistributes and under what licence:
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+
 ## Use
 
 ```bash

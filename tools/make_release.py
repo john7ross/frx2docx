@@ -23,7 +23,8 @@ from frxkit import __version__                                  # noqa: E402
 DIST = os.path.join(ROOT, "dist")
 
 DOCS = ["README.md", "README.ru.md", "ARCHITECTURE.md", "ARCHITECTURE.ru.md",
-        "CHANGELOG.md", "LICENSE", "requirements.txt", "КАК ПОЛЬЗОВАТЬСЯ.docx"]
+        "CHANGELOG.md", "LICENSE", "THIRD-PARTY-NOTICES.md",
+        "requirements.txt", "КАК ПОЛЬЗОВАТЬСЯ.docx"]
 
 # Шрифты внутри .exe, а SIL OFL требует, чтобы лицензия ехала вместе с ними
 FONT_DOCS = ["fonts/LICENSE-Liberation.txt", "fonts/AUTHORS-Liberation.txt"]
