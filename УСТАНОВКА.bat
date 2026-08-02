@@ -1,15 +1,26 @@
 @echo off
 chcp 866 >nul
 setlocal
-title Установка зависимостей frx2docx
+title frx2docx - proverka i, esli nuzhno, ustanovka
 
 set "HERE=%~dp0"
 set "PY=%HERE%python\python.exe"
 if not exist "%PY%" set "PY=python"
 
 echo.
-echo   Ставлю библиотеки, которые нужны конвертеру.
-echo   Если рядом есть папка wheels - интернет не потребуется.
+echo   Proveryayu, chego ne hvataet.
+echo.
+
+"%PY%" -c "import docx" 2>nul
+if not errorlevel 1 (
+    echo   Vsyo uzhe vnutri arhiva - stavit nechego.
+    echo   Zapuskayte KONVERTIROVAT.bat
+    echo.
+    pause
+    exit /b 0
+)
+
+echo   Bibliotek net - eto sborka iz ishodnikov. Stavlyu.
 echo.
 
 if exist "%HERE%wheels" (
@@ -20,14 +31,14 @@ if exist "%HERE%wheels" (
 
 if errorlevel 1 goto :fail
 echo.
-echo   Готово. Запускайте КОНВЕРТИРОВАТЬ.bat
+echo   Gotovo. Zapuskayte KONVERTIROVAT.bat
 echo.
 pause
 exit /b 0
 
 :fail
 echo.
-echo   Не получилось. Проверьте интернет или наличие папки wheels.
+echo   Ne poluchilos. Proverte internet ili nalichie papki wheels.
 echo.
 pause
 exit /b 1
